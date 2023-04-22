@@ -1,6 +1,4 @@
-from dataclasses import dataclass
 from os import system, name
-from typing import Callable
 
 RED = '🔴'
 BLUE = '🔵'
