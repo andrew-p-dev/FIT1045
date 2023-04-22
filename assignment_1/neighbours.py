@@ -6,6 +6,12 @@ BLANK = '\u3000'
 K = 4
 ROWS = 6
 COLUMNS = 7
+DIRECTIONS = [
+  (0, 1),  # up/down
+  (1, 1),  # top-left/bottom-right diagonal
+  (1, 0),  # left/right
+  (1, -1), # top-right/bottom-left diagonal
+]
 board = [[BLANK] * COLUMNS for _ in range(ROWS)]
 height = [0 for _ in range(COLUMNS)]
 
@@ -44,29 +50,29 @@ while (winner is None):
   render()
 
   # win/loss logic
-  directions = [
-    (0, 1),
-    (1, 1),
-    (1, 0),
-    (1, -1),
-    (0, -1),
-    (-1, -1),
-    (-1, 0),
-    (-1, 1),
-  ]
-  
-  for direction in directions:
+  for direction in DIRECTIONS:
     count = 0
+
+    # check the "positive" direction
     x = column
     y = row
-    while 0 <= x < COLUMNS and 0 <= y < ROWS and board[y][x] == player:
+    while 0 <= x < COLUMNS and 0 <= y < ROWS and board[y][x] == player and count < K:
       count += 1
-      if count == K:
-        winner = player
-        print("The winner is: " + winner)
-        break
       x += direction[0]
       y += direction[1]
+    
+    # check the "negative" direction
+    x = column - direction[0]
+    y = row - direction[1]
+    while 0 <= x < COLUMNS and 0 <= y < ROWS and board[y][x] == player and count < K:
+      count += 1
+      x -= direction[0]
+      y -= direction[1]
+    
+    if count == K:
+      winner = player
+      print("The winner is: " + winner)
+      break
 
   if height[column] == ROWS:
     fullColumns += 1
