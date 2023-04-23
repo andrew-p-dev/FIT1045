@@ -16,7 +16,7 @@ board = [[BLANK] * COLUMNS for _ in range(ROWS)]
 height = [0 for _ in range(COLUMNS)]
 
 def render():
-  system('cls' if name == 'nt' else 'clear') # clear the shell
+  system('cls' if name == 'nt' else 'clear')
   print(' ' + "".join([' ' + str(i) + ' ' for i in range(1, COLUMNS + 1)])) # print col number
   for row in board: # print the board
     print('|' + "|".join([row[i] for i in range(COLUMNS)]) + '|')

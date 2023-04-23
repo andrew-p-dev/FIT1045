@@ -76,19 +76,16 @@ def drop_piece(connect4_board, player, column):
 		for m in reversed(range(0,6)):
 			if connect4_board[m][column] == " ":
 				connect4_board[m][column] = 'X'
-				print("We set it to X and returned True")
+				print(f"Player 1 played [][]")
 				return True
-			elif (connect4_board[m][column] == 'X') or (connect4_board[m][column] == 'O'):
-				return False
 	elif player == 2:
 		for n in reversed(range(0,6)):
 			if connect4_board[n][column] == ' ':
 				print("We set it to O and returned True")
 				connect4_board[n][column] = 'O'
 				return True
-			elif (connect4_board[n][column] == 'X') or (connect4_board[n][column] == 'O'):
-				return False
-	
+	return False
+
 def execute_player_turn(player, board): # Task 5
 	prompt = f"Player {player}, please enter the column you would like to drop your piece into: "
 
@@ -188,17 +185,15 @@ def local_2_player_game():
 	while True:
 		print_board(board)
 		print(f"Executing turn for player {player}")
-		column_chosen = execute_player_turn(player, board)
-		# print(f"Dropping for player {player}")
-		# dropped = drop_piece(board,player, column_chosen)
 
-		# print(f"Drop was {dropped}")
-		if column_chosen is not None:
-			if player == 1:
+		if player == 1:
+			column_chosen = execute_player_turn(player, board)
+			if column_chosen is not None:
 				player = 2
-			else:
-				player = 1
-			
+		else:
+			drop_piece(board,player, 4)
+			player = 1
+
 		end_of_game(board)
 
 if __name__ == "__main__":
