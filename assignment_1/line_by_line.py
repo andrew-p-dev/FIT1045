@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from os import system, name
-from typing import Callable
+from typing import Any, Callable
 
 RED = '🔴'
 BLUE = '🔵'
@@ -17,7 +17,7 @@ class CheckDirection:
   startY: int
   incX: int
   incY: int
-  next: Callable[[tuple[int, int]], tuple[int, int]]
+  next: Callable[[Any, Any], tuple]
 
 def render():
   system('cls' if name == 'nt' else 'clear') # clear the shell
