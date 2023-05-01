@@ -2,6 +2,8 @@
 
 [View the slides](https://www.canva.com/design/DAFg1vJXg7s/6-0FxSWMXRa86JW2km5cuA/view?utm_content=DAFg1vJXg7s&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
+This repo contains some code examples intended to teach beginner programming concepts in python, such as built in data structures, code style, debugging, and some basic algorithms.
+
 ## Run the Examples
 
 All examples can be run just by calling `python <file_name>`. This repo requires python 3.10 or higher (just for the typing code). You can check your python version using `python --version`.
