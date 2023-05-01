@@ -1,4 +1,4 @@
-# FIT1045: Basic Python, Interviewing and Algorithms/Data Structures
+# FIT1045: Basic Algorithms/Data Structures, Debugging, Code Style in Python
 
 [View the slides](https://www.canva.com/design/DAFg1vJXg7s/6-0FxSWMXRa86JW2km5cuA/view?utm_content=DAFg1vJXg7s&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
