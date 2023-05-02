@@ -23,3 +23,7 @@ All examples can be run just by calling `python <file_name>`. This repo requires
 Note that the [Board Printing](./debugging/board_printing/) code never completely works. I fixed a few bugs, but there is quite a lot of code and even with my fixes there are more problems with the conditional statements in `end_of_game()`. Sometimes when everything seems difficult and fixing one issue just reveals more and more bugs, my advice is to throw it out and try again.
 
 Don't do this if you can avoid it, but if you only develop a good mental model of what your code is supposed to do after writing an initial buggy implementation, you might be able to rewrite it in a more concise, or better laid out way that makes it easier to understand, and avoid those issues.
+
+## LeetCode Examples
+
+I also included two examples of LeetCode questions: [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) and [2415. Reverse Odd Levels of Binary Tree](https://leetcode.com/problems/reverse-odd-levels-of-binary-tree/). The intent is to demonstrate how to traverse a tree and build upon a simple solution to come up with a clean solution to a more complex problem.
